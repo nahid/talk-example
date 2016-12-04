@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6823bf442651afa109ed81f0bece03af",
-    "content-hash": "eb19fdeb6557bd1384a5baf846cd002c",
+    "hash": "e4e685bf695b402b96e6d5e144e739b4",
+    "content-hash": "f0ed48c09fcad78c72b149be89d5ac83",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -758,6 +758,59 @@
                 "schedule"
             ],
             "time": "2016-01-26 21:23:30"
+        },
+        {
+            "name": "nahid/talk",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nahid/talk.git",
+                "reference": "8eb1c1ebb9f4900431031173d5771eb91393b037"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nahid/talk/zipball/8eb1c1ebb9f4900431031173d5771eb91393b037",
+                "reference": "8eb1c1ebb9f4900431031173d5771eb91393b037",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.0.* || 5.1.* || 5.2.* || 5.3.*",
+                "illuminate/support": "5.0.* || 5.1.* || 5.2.* || 5.3.*",
+                "nesbot/carbon": "^1.21",
+                "php": ">=5.5.9",
+                "sebastian-berc/repositories": "^1.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^3.1",
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nahid\\Talk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC(3.0)"
+            ],
+            "authors": [
+                {
+                    "name": "Nahid Bin Azhar",
+                    "email": "nahid.dns@gmail.com"
+                }
+            ],
+            "description": "Talk is a PHP based users conversations library. It helps to develop users messages and conversations in easy way. Talk also support Laravel 5>=",
+            "homepage": "https://github.com/nahid/talk",
+            "keywords": [
+                "chat",
+                "conversations",
+                "inbox",
+                "laravel",
+                "message",
+                "php"
+            ],
+            "time": "2016-12-04 07:10:59"
         },
         {
             "name": "nesbot/carbon",

@@ -2,8 +2,8 @@
 This is a demo project for [Laravel-Talk](https://github.com/nahid/talk) package. You can learn from here how to use Talk.
 
 ### Requirements
-PHP 5.5.9 >=
-Composer
+* PHP 5.5.9 >=
+* Composer
 
 ### Installation
 
