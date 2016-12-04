@@ -29,7 +29,7 @@ $(document).ready(function () {
     });
 
 
-    $('.talkDeleteMessage').on('click', function (e) {
+    $('body').on('click', '.talkDeleteMessage', function (e) {
         e.preventDefault();
         var tag, url, id, request;
 
