@@ -67,4 +67,9 @@ class MessageController extends Controller
             return response()->json(['status'=>'errors', 'msg'=>'something went wrong'], 401);
         }
     }
+
+    public function tests()
+    {
+        dd(Talk::channel());
+    }
 }

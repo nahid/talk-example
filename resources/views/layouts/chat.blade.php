@@ -64,8 +64,27 @@
 <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
 
-        <script src="{{asset('chat/js/index.js')}}"></script>
+
+
         <script src="{{asset('chat/js/talk.js')}}"></script>
+
+    <script>
+        var show = function(data) {
+            alert(data.sender.name + " - '" + data.message + "'");
+        }
+
+    var data = {
+            "name" : "Nahid",
+            "message": "hello",
+            "image": "image/path.jpg"
+        };
+
+        var msgshow = function(data) {
+            var html = '<h1>' + data.name + '</h1>';
+        }
+
+    </script>
+    {!! talk_live(['user'=>["id"=>auth()->user()->id, 'callback'=>['msgshow']]]) !!}
 
   </body>
 </html>
