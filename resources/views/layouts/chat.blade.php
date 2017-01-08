@@ -73,14 +73,18 @@
             alert(data.sender.name + " - '" + data.message + "'");
         }
 
-    var data = {
-            "name" : "Nahid",
-            "message": "hello",
-            "image": "image/path.jpg"
-        };
-
         var msgshow = function(data) {
-            var html = '<h1>' + data.name + '</h1>';
+            var html = '<li id="message-' + data.id + '">' +
+            '<div class="message-data">' +
+            '<span class="message-data-name"> <a href="#" class="talkDeleteMessage" data-message-id="' + data.id + '" title="Delete Messag"><i class="fa fa-close" style="margin-right: 3px;"></i></a>' + data.sender.name + '</span>' +
+            '<span class="message-data-time">1 Second ago</span>' +
+            '</div>' +
+            '<div class="message my-message">' +
+            data.message +
+            '</div>' +
+            '</li>';
+
+            $('#talkMessages').append(html);
         }
 
     </script>
