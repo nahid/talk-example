@@ -80,7 +80,7 @@ php artisan serve
 ```
 Now open you project in browser and goto http://localhost:8000. Then login with the given user credentials
 
-> email: talk@example.com
+> email: talk@example.com    
 > password: 123456
 
 So, Lets start you journey :)
