@@ -21,6 +21,12 @@ After complete installation process you have to configure you database credentia
 cp .env.example .env
 ```
 
+To generate key please run this
+
+```
+php artisan key:generate
+```
+
 Now open `.env` file and write database informations. Then run migrate from you terminal
 
 ```shell
@@ -35,9 +41,44 @@ php artisan db:seed
 
 Thats it
 
+#### For Realtime
+
+If you want to get realtime service from this app you have to configure it first. Goto `app/talk.php` and 
+enable broadcast. After enabling broadcast please set the Pusher app credentials in pusher section. 
+
+```php
+return [
+    'user' => [
+        'model' => 'App\User'
+    ],
+    'broadcast' => [
+        'enable' => false,
+        'app_name' => 'talk-example',
+        'pusher' => [
+            'app_id'        => env('PUSHER_APP_ID'),
+            'app_key'       => env('PUSHER_KEY'),
+            'app_secret'    => env('PUSHER_SECRET')
+        ]
+    ]
+];
+````
+
+> Its recommended to setup **redis** for this app to get better performance in realtime messaging.
+
+Before starting chat you have to start queue listen.
+
+```
+php artisan queue:listen
+```
+
 ### Run 
 
-Now open you project in browser and goto login. Then login with the given user credentials
+Run this command in your terminal.
+
+```shell
+php artisan serve
+```
+Now open you project in browser and goto http://localhost:8000. Then login with the given user credentials
 
 > email: talk@example.com
 > password: 123456
