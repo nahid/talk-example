@@ -28,10 +28,7 @@
         "psr-4": {
             "App\\": "app/",
             "Nahid\\Talk\\": "nahid/talk/src/"
-        },
-        "files": [
-            "nahid/talk/src/helpers/talk.php"
-        ]
+        }
     },
     "autoload-dev": {
         "classmap": [
