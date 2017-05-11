@@ -9,7 +9,6 @@
         "laravel/framework": "5.3.*",
         "sebastian-berc/repositories": "^1.0",
         "yohang88/letter-avatar": "^1.0",
-        "nahid/talk": "^2.0",
         "vinkla/pusher": "^2.4",
         "pusher/pusher-php-server": "^2.6",
         "predis/predis": "^1.1"
@@ -26,10 +25,11 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Nahid\\Talk\\": "nahid/talk/src"
         },
         "files": [
-
+            "nahid/talk/src/helpers/talk.php"
         ]
     },
     "autoload-dev": {
