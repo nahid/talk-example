@@ -43,7 +43,7 @@ Thats it
 
 #### For Realtime
 
-If you want to get realtime service from this app you have to configure it first. Goto `app/talk.php` and
+If you want to get realtime service from this app you have to configure it first. Goto `config/talk.php` and
 enable broadcast. After enabling broadcast please set the Pusher app credentials in pusher section.
 
 ```php
