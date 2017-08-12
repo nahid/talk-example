@@ -12,7 +12,11 @@ return [
     | any other location as required by the application or its packages.
     */
 
+<<<<<<< HEAD
     'name' => 'Test Chat 123',
+=======
+    'name' => 'Talk Message',
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +42,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'debug' => env('APP_DEBUG', true),
+=======
+    'debug' => env('APP_DEBUG', false),
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +59,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'url' => env('APP_URL', $_ENV['APP_URL']),
+=======
+    'url' => env('APP_URL', 'http://localhost'),
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +115,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'key' => env('APP_KEY', $_ENV['APP_KEY']),
+=======
+    'key' => env('APP_KEY'),
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 
     'cipher' => 'AES-256-CBC',
 
@@ -230,4 +246,8 @@ return [
 
     ],
 
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93

@@ -5,11 +5,15 @@ $(document).ready(function () {
         }
     });
 
+<<<<<<< HEAD
     $('#message-data').on('keydown', function(event){
         if ((event.keyCode == 10 || event.keyCode == 13) && event.ctrlKey){
             $('#talkSendMessage').trigger('submit');
         }
     });
+=======
+
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
     $('#talkSendMessage').on('submit', function(e) {
         e.preventDefault();
         var url, request, tag, data;

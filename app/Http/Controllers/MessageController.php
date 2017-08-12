@@ -72,6 +72,7 @@ class MessageController extends Controller
     {
         dd(Talk::channel());
     }
+<<<<<<< HEAD
 
     public function index()
     {
@@ -80,3 +81,6 @@ class MessageController extends Controller
     }
 
 }
+=======
+}
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93

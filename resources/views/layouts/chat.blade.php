@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8">
       <meta name="csrf-token" content="{{csrf_token()}}">
+<<<<<<< HEAD
     <title>Test Chat 123</title>
+=======
+    <title>Talk Message</title>
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
     
     
     <link rel="stylesheet" href="{{asset('chat/css/reset.css')}}">
@@ -20,7 +24,11 @@
   <body>
 <div class="header">
     <div class="container header-brand">
+<<<<<<< HEAD
         <a href="{{url('/home')}}" class="brand">Test Chat 123</a>
+=======
+        <a href="{{url('/home')}}" class="brand">Talk Message</a>
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
     </div>
 </div>
       <div class="container clearfix body">
@@ -86,12 +94,19 @@
 
             $('#talkMessages').append(html);
         }
+<<<<<<< HEAD
 	var conShow = funtion(data){
 	    console.log(data);
 	}
+=======
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 
     </script>
     {!! talk_live(['user'=>["id"=>auth()->user()->id, 'callback'=>['msgshow']]]) !!}
 
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93

@@ -86,6 +86,7 @@ body {
   color: #92959E;
 }
 
+<<<<<<< HEAD
 .people-list .unread-counter {
     display: none;
     height: 20px;
@@ -100,6 +101,8 @@ body {
     margin-left: 5px;
     font-weight: bold;
 }
+=======
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 .chat {
   width: 490px;
   float: left;
