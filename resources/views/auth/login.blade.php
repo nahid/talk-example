@@ -42,7 +42,11 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
+<<<<<<< HEAD
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : ''}}> Remember Me
+=======
                                         <input type="checkbox" name="remember"> Remember Me
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
                                     </label>
                                 </div>
                             </div>

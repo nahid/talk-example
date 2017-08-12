@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
 use App\User;
 
 use Nahid\Talk\Live\Broadcast;
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
 
 class HomeController extends Controller
 {
@@ -26,6 +29,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
+        return view('home');
+=======
         $users = User::all();
         return view('home', compact('users'));
     }
@@ -35,5 +41,6 @@ class HomeController extends Controller
 
         $b = new Broadcast(\Illuminate\Contracts\Config\Repository::class, \Vinkla\Pusher\PusherFactory::class);
         dd($b->tests());
+>>>>>>> 08ed55357d1124fbf16f3a0a8a1d11baa1561e93
     }
 }
