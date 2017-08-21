@@ -13,9 +13,11 @@ class MessageController extends Controller
     protected $authUser;
     public function __construct()
     {
-        $this->middleware('auth');
-        Talk::setAuthUserId(Auth::user()->id);
-
+       $this->middleware(function ($request, $next) {
+            Talk::setAuthUserId(Auth::user()->id);
+            return $next($request);
+        });
+        
         View::composer('partials.peoplelist', function($view) {
             $threads = Talk::threads();
             $view->with(compact('threads'));
