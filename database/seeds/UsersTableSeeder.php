@@ -26,14 +26,14 @@ class UsersTableSeeder extends Seeder
                 "password"      => bcrypt('123456'),
                 "created_at"    => Carbon::now()->format('Y-m-d H:i:s'),
                 "updated_at"    => Carbon::now()->format('Y-m-d H:i:s')
-            ], 
+            ],
             [
                 "name"          => "Firoz Serniabat",
                 "email"         => "firoz@example.com",
                 "password"      => bcrypt('123456'),
                 "created_at"    => Carbon::now()->format('Y-m-d H:i:s'),
                 "updated_at"    => Carbon::now()->format('Y-m-d H:i:s')
-            ], 
+            ],
             [
                 "name"          => "Rony Al Manum",
                 "email"         => "rony@example.com",
@@ -54,7 +54,7 @@ class UsersTableSeeder extends Seeder
                 "password"      => bcrypt('123456'),
                 "created_at"    => Carbon::now()->format('Y-m-d H:i:s'),
                 "updated_at"    => Carbon::now()->format('Y-m-d H:i:s')
-            ], 
+            ],
             [
                 "name"          => "Obi Plabon",
                 "email"         => "obi@example.com",
@@ -64,8 +64,6 @@ class UsersTableSeeder extends Seeder
             ],
         ];
 
-        foreach ($users as $user) {
-            DB::table('users')->insert($user);
-        }
+        DB::table('users')->insert($users);
     }
 }

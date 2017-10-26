@@ -15,7 +15,7 @@ composer install
 
 ### Configurations
 
-After complete installation process you have to configure you database credentials. First copy `.env.example` as `.env` 
+After complete installation process you have to configure you database credentials. First copy `.env.example` as `.env`
 
 ```shell
 cp .env.example .env
@@ -43,8 +43,8 @@ Thats it
 
 #### For Realtime
 
-If you want to get realtime service from this app you have to configure it first. Goto `app/talk.php` and 
-enable broadcast. After enabling broadcast please set the Pusher app credentials in pusher section. 
+If you want to get realtime service from this app you have to configure it first. Goto `config/talk.php` and
+enable broadcast. After enabling broadcast please set the Pusher app credentials in pusher section.
 
 ```php
 return [
@@ -71,7 +71,7 @@ Before starting chat you have to start queue listen.
 php artisan queue:listen
 ```
 
-### Run 
+### Run
 
 Run this command in your terminal.
 
@@ -80,7 +80,7 @@ php artisan serve
 ```
 Now open you project in browser and goto http://localhost:8000. Then login with the given user credentials
 
-> email: talk@example.com    
+> email: talk@example.com
 > password: 123456
 
 So, Lets start you journey :)
