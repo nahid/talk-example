@@ -9,8 +9,8 @@
         "laravel/framework": "5.3.*",
         "sebastian-berc/repositories": "^1.0",
         "yohang88/letter-avatar": "^1.0",
-        "vinkla/pusher": "^3.0",
-        "pusher/pusher-php-server": "^3.0",
+        "vinkla/pusher": "2.5.0",
+        "pusher/pusher-php-server": "^2.6",
         "predis/predis": "^1.1",
         "nahid/talk": "^2.2"
     },
