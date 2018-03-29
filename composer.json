@@ -12,7 +12,7 @@
         "vinkla/pusher": "^3.0",
         "pusher/pusher-php-server": "^3.0",
         "predis/predis": "^1.1",
-        "nahid/talk": "^2.2"
+        "nahid/talk": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
