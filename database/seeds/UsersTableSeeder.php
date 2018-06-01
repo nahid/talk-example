@@ -12,6 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        \Illuminate\Support\Facades\DB::table('users')->truncate();
         $users = [
             [
                 "name"          => "Nahid Bin Azhar",

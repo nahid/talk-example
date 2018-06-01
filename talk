@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+
+UNAMEOUT="$(uname -s)"
+case "${UNAMEOUT}" in
+    Linux*)             MACHINE=linux;;
+    Darwin*)            MACHINE=mac;;
+    MINGW64_NT-10.0*)   MACHINE=mingw64;;
+    *)                  MACHINE="UNKNOWN"
+esac
+
+if [ "$MACHINE" == "UNKNOWN" ]; then
+    echo "Unsupported system type"
+    echo "System must be a Macintosh, Linux or Windows"
+    echo ""
+    echo "System detection determined via uname command"
+    echo "If the following is empty, could not find uname command: $(which uname)"
+    echo "Your reported uname is: $(uname -s)"
+fi
+
+# Set environment variables for dev
+if [ "$MACHINE" == "linux" ]; then
+    if grep -q Microsoft /proc/version; then # WSL
+        export XDEBUG_HOST=10.0.75.1
+    else
+        if [ "$(command -v ip)" ]; then
+            export XDEBUG_HOST=$(ip addr show docker0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1)
+        else
+            export XDEBUG_HOST=$(ifconfig docker0 | grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1)
+        fi
+    fi
+    SEDCMD="sed -i"
+elif [ "$MACHINE" == "mac" ]; then
+    export XDEBUG_HOST=$(ipconfig getifaddr en0) # Ethernet
+
+    if [ -z "$XDEBUG_HOST" ]; then
+        export XDEBUG_HOST=$(ipconfig getifaddr en1) # Wifi
+    fi
+    SEDCMD="sed -i .bak"
+elif [ "$MACHINE" == "mingw64" ]; then # Git Bash
+    export XDEBUG_HOST=10.0.75.1
+    SEDCMD="sed -i"
+fi
+
+if [ $# -eq 0 ]; then
+    echo "No command found"
+    exit
+fi
+
+if [ $1 == "ready" ]; then
+    if [ -e .env ]
+    then
+        echo ".env is already exists"
+    else
+        echo "Making .env file ..."
+        cp .env.example .env
+    fi
+
+    source .env
+
+    if [ -e docker-compose.yml ]
+    then
+        echo "docker-compose.yml is already exists"
+    else
+        echo "Making docker-compose.yml file ..."
+        cp docker-compose.yml.example docker-compose.yml
+    fi
+
+    echo "Setting permission for docker/php/init.sh ..."
+    chmod a+x docker/php/init.sh
+
+    echo "Build and Run docker images ..."
+    docker-compose up -d --build
+
+    echo "Ensure laravel dependencies ..."
+    docker-compose exec app composer install
+
+
+    echo "Talk Example project is ready to use"
+    echo "Thank you"
+fi
+
+if [ $1 == "about" ]; then
+    echo "Developed By - Nahid Bin Azhar"
+    echo "Email - nahid.dns@gmail.com"
+    echo "Repo Link - https://github.com/nahid/talk-example"
+    echo "Talk Repo Link - https://github.com/nahid/talk"
+fi
+
+if [ $1 == "example" ]; then
+    open https://github.com/nahid/talk-example
+fi
+
+if [ $1 == "go" ]; then
+    open https://github.com/nahid/talk
+fi

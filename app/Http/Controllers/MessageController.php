@@ -34,6 +34,10 @@ class MessageController extends Controller
             $messages = $conversations->messages;
         }
 
+        if (count($messages) > 0) {
+            $messages = $messages->sortBy('id');
+        }
+
         return view('messages.conversations', compact('messages', 'user'));
     }
 

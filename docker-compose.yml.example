@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+
+  nginx:
+      image: nginx:latest
+      ports:
+        - 8088:80
+      volumes:
+        - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      volumes_from:
+        - app
+
+  app:
+      build: ./docker/php/
+      volumes:
+        - .:/var/www/html
+      links:
+          - database
+          - redis
+      environment:
+        - "DB_PORT=3306"
+        - "DB_HOST=database"
+
+  database:
+      image: mysql:5.7
+      environment:
+        - "MYSQL_ROOT_PASSWORD=secret"
+        - "MYSQL_DATABASE=db_talk"
+      volumes:
+        - ${TALK_BACKUP_PATH}/mysql:/var/lib/mysql
+      ports:
+        - "33068:3306"
+
+  redis:
+      build: ./docker/redis/
+      volumes:
+          - ${TALK_BACKUP_PATH}/redis:/data
+      ports:
+          - 6379:6379

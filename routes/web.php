@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('t', function() {
+    phpinfo();
+});
+
 Auth::routes();
 
 Route::get('tests', 'MessageController@tests');

@@ -13,13 +13,13 @@ class CreateAttachmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('attachments', function(Blueprint $tbl) {
+        /*Schema::create('attachments', function(Blueprint $tbl) {
             $tbl->increments('id');
             $tbl->integer('message_id');
             $tbl->string('source', 100);
             $tbl->string('name', 150);
             $tbl->string('mime_type', 50)->nullable();
-        });
+        });*/
     }
 
     /**
