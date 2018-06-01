@@ -1,45 +1,59 @@
 ## Talk Example
 This is a demo project for [Laravel-Talk](https://github.com/nahid/talk) package. You can learn from here how to use Talk.
 
+### Announcement
+Yes, now Talk Example project is Docker ready.
+
 ### Requirements
-* PHP 5.5.9 >=
-* Composer
+* Docker
+* Docker Compose
 
-### Installation
-
-There are no extra process for installation. You may install it as per laravel installation system. Open terminal, goto this project and run these command.
-
-```shell
-composer install
-```
 
 ### Configurations
 
-After complete installation process you have to configure you database credentials. First copy `.env.example` as `.env`
+If you want to use our default settings then you didn't need to configure anything except Pusher credentials.
+
+But if you want to configure as you want then copy .env.example to .env
 
 ```shell
 cp .env.example .env
 ```
 
-To generate key please run this
+then configure your desire settings
 
-```
-php artisan key:generate
-```
+and now copy docker-compose.yml.example to docker-compose.yml and configure as you want
 
-Now open `.env` file and write database informations. Then run migrate from you terminal
 
 ```shell
-php artisan migrate
+cp docker-compose.yml.example docker-compose.yml
 ```
 
-When database migration then you have to run database seed command.
-
-```shell
-php artisan db:seed
-```
 
 Thats it
+
+### Installation
+
+There are no extra panic to install this project just run this command and enjoy
+
+```shell
+./talk ready
+```
+
+Chill!
+
+#### What contains with Docker?
+
+- PHP 7.1.1
+- Nginx
+- MySQL 5.7
+- Redis
+- Git
+- GD Library
+- Zip Library
+
+So you no need to Install PHP, no need to manage queue, our system will manage all queue, worker and database system with auto migration and seeding.
+Cool nah?
+
 
 #### For Realtime
 
@@ -63,22 +77,7 @@ return [
 ];
 ````
 
-> Its recommended to setup **redis** for this app to get better performance in realtime messaging.
-
-Before starting chat you have to start queue listen.
-
-```
-php artisan queue:listen
-```
-
-### Run
-
-Run this command in your terminal.
-
-```shell
-php artisan serve
-```
-Now open you project in browser and goto http://localhost:8000. Then login with the given user credentials
+Now open you project in browser and goto http://localhost:8088. Then login with the given user credentials
 
 > email: talk@example.com
 > password: 123456
