@@ -47,6 +47,7 @@ Chill!
 - Nginx
 - MySQL 5.7
 - Redis
+- Supervisor
 - Git
 - GD Library
 - Zip Library
