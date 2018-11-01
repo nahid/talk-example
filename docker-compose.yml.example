@@ -5,7 +5,7 @@ services:
   nginx:
       image: nginx:latest
       ports:
-        - 8088:80
+        - ${APP_PORT}:80
       volumes:
         - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       volumes_from:
@@ -30,11 +30,11 @@ services:
       volumes:
         - ${TALK_BACKUP_PATH}/mysql:/var/lib/mysql
       ports:
-        - "33068:3306"
+        - ${SQL_PORT}:3306
 
   redis:
       build: ./docker/redis/
       volumes:
           - ${TALK_BACKUP_PATH}/redis:/data
       ports:
-          - 6379:6379
+          - ${REDIS_PORT_EXPOSE}:6379

@@ -791,6 +791,57 @@
             "time": "2017-06-19T01:22:40+00:00"
         },
         {
+            "name": "mpratt/embera",
+            "version": "1.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpratt/Embera.git",
+                "reference": "45c380c40f6d08687c193c685a7ebd3f3db27811"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpratt/Embera/zipball/45c380c40f6d08687c193c685a7ebd3f3db27811",
+                "reference": "45c380c40f6d08687c193c685a7ebd3f3db27811",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Embera": "Lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Pratt",
+                    "email": "pratt@hablarmierda.net",
+                    "homepage": "http://www.michael-pratt.com",
+                    "role": "Author/Developer"
+                }
+            ],
+            "description": "Oembed consumer library, that gives information about urls. It helps you replace urls to 60+ sites like youtube or vimeo, with their html embed code.",
+            "homepage": "https://github.com/mpratt/Embera",
+            "keywords": [
+                "Auto embed",
+                "Embed Text",
+                "Url Embed",
+                "embed",
+                "instagram",
+                "oembed",
+                "twitter",
+                "vimeo",
+                "vine",
+                "youtube"
+            ],
+            "time": "2016-07-15T15:57:44+00:00"
+        },
+        {
             "name": "mtdowling/cron-expression",
             "version": "v1.2.1",
             "source": {
@@ -840,17 +891,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nahid/talk.git",
-                "reference": "551065bd0957b41200d5ab9724ea8bd86dedf323"
+                "reference": "0c0a10936f7c685e0d1a62cae40e3d19a0f8df42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nahid/talk/zipball/551065bd0957b41200d5ab9724ea8bd86dedf323",
-                "reference": "551065bd0957b41200d5ab9724ea8bd86dedf323",
+                "url": "https://api.github.com/repos/nahid/talk/zipball/0c0a10936f7c685e0d1a62cae40e3d19a0f8df42",
+                "reference": "0c0a10936f7c685e0d1a62cae40e3d19a0f8df42",
                 "shasum": ""
             },
             "require": {
                 "illuminate/contracts": ">=5.0.0",
                 "illuminate/support": ">=5.0.0",
+                "mpratt/embera": "^1.9",
                 "nesbot/carbon": "^1.21",
                 "php": ">=5.5.9",
                 "predis/predis": "~1.1.1",
@@ -858,6 +910,7 @@
                 "sebastian-berc/repositories": "^1.0"
             },
             "require-dev": {
+                "ext-json": "*",
                 "graham-campbell/testbench": "^3.1",
                 "phpunit/phpunit": "^4.8 || ^5.0"
             },
@@ -902,7 +955,7 @@
                 "real-time",
                 "realtime"
             ],
-            "time": "2018-04-25T17:54:38+00:00"
+            "time": "2018-11-01T09:53:34+00:00"
         },
         {
             "name": "nesbot/carbon",

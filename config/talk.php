@@ -1,7 +1,9 @@
 <?php
 return [
     'user' => [
-        'model' => 'App\User'
+        'model' => 'App\User',
+        'foreignKey' => null,
+        'ownerKey' => null,
     ],
 
 
@@ -17,6 +19,11 @@ return [
                 'encrypted' => true
             ]
         ],
+    'oembed' => [
+        'enabled' => true,
+        'url' => '',
+        'key' => ''
+    ]
 
     ]
 ];

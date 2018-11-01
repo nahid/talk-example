@@ -24,7 +24,7 @@
                             <span class="message-data-time">{{$message->humans_time}} ago</span>
                         </div>
                         <div class="message my-message">
-                            {{$message->message}}
+                            {{$message->toHtmlString()}}
                         </div>
                     </li>
                 @endif
