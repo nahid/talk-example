@@ -177,6 +177,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Pusher\Laravel\PusherServiceProvider::class,
         Nahid\Talk\TalkServiceProvider::class,
 
     ],
@@ -227,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Talk'  =>  Nahid\Talk\Facades\Talk::class,
+        'Pusher' => Pusher\Laravel\Facades\Pusher::class
 
     ],
 

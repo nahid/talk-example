@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('t', function() {
-    phpinfo();
+    dd(env('APP_URL'));
 });
 
 Auth::routes();
