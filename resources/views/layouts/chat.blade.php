@@ -85,6 +85,9 @@
             '</li>';
 
             $('#talkMessages').append(html);
+
+            var objDiv = $('.chat-history');
+            objDiv.scrollTop(objDiv.height());
         }
 
     </script>

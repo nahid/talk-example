@@ -23,6 +23,9 @@ $(document).ready(function () {
             if (response.status == 'success') {
                 $('#talkMessages').append(response.html);
                 tag[0].reset();
+
+                var objDiv = $('.chat-history');
+                objDiv.scrollTop(objDiv.height());
             }
         });
 

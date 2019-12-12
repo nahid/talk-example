@@ -24,7 +24,7 @@ class MessageController extends Controller
 
     public function chatHistory($id)
     {
-        $conversations = Talk::getMessagesByUserId($id, 0, 5);
+        $conversations = Talk::getMessagesByUserId($id, 0, 50);
         $user = '';
         $messages = [];
         if(!$conversations) {
