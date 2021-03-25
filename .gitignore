@@ -11,3 +11,4 @@ Homestead.yaml
 docker-compose.yml
 docker/.DS_Store
 pkgs
+.DS_Store
